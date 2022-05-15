@@ -37,7 +37,7 @@
     "showES6CompileOption": false,
     "minifyWXML": true
   },
-  "appid": "wx6cd6c92036625556",
+  "appid": "",
   "projectname": "CloudDevlope",
   "libVersion": "2.14.1",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
