@@ -1,0 +1,28 @@
+@import "/lib/weui.wxss";
+.foundTitle {
+    width: 100%;
+}
+.picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+}
+.weui-uploader__tips {
+    color: gray;
+    font-size: 10px;
+}
+.weui-uploader__title {
+    color: black;
+    font-size: 14px;
+}
+.pg {
+    background-color:var(--weui-BG-2)
+}
+.weui-cells__title {
+    color: black;
+    font-size: 16px;
+}
+
+.ifConsignBox {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,87 @@
+/**index.wxss**/
+.title-image {
+  width:  100%;
+  position: absolute;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: rgba(245, 245, 245);
+}
+.container .main-title {
+  width: 90%;
+  margin-bottom: 40px;
+  padding-top: 100px;
+  z-index: 2;
+}
+
+.container .main-title-text {
+  font-size: 24px;
+  font-weight: 800;
+  z-index: 3;
+}
+
+.container .lost-info {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 5%;
+  z-index: 2;
+}
+
+.container .lost-info .title{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.container .lost-info .title .title-text{
+  font-size: 20px;
+  font-weight: 800;
+}
+.info-image{
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.container .lost-info .info{
+  margin-top: 10x;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.container .lost-info .info .info-text{
+  word-break:break-all;
+}
+
+.container .retrieve-contact-info {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 5%;
+  margin-top: 30px;
+}
+
+.container .retrieve-contact-info .title{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.container .retrieve-contact-info .title .title-text{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.container .retrieve-contact-info .info1{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.container .retrieve-contact-info .info2{
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}

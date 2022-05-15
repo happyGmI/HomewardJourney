@@ -1,0 +1,135 @@
+
+/* pages/all/all.wxss */
+page{
+  background-color: #fffff8;
+}
+.top-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.top-navigation .top-left {
+  width:35%;
+  margin-left: 10%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fffff8;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.top-navigation .top-right {
+  width: 35%;
+  margin-left: 10%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color:#fffff8;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.top-navigation .top-left {
+  width:35%;
+  margin-left: 10%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fffff8;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.top-navigation .in {
+  width: 35%;
+  margin-left: 10%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #5cb3cc;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.mid {
+  display: flex;
+  flex-direction: row;
+}
+
+.stateType {
+  width: 88px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  margin-top: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: #baccd9;
+}
+
+.stateDate {
+  width: 86px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  margin-top: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: #baccd9;
+}
+
+.type {
+  width: 64px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  margin-top: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.all-info {
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  background-color: white;
+  height: 100px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.all-info .one-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 4px 4px rgb(245, 245, 245);
+}
+.all-info .one-info-image {
+  margin-left: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+}
+
+.info-title {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.all-info .one-info .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-info .one-info .info .info-text {
+  margin-left: 25px;
+  margin-bottom: 0px;
+  font-weight: 100;
+  font-size: small;
+}

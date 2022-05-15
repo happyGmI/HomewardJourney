@@ -1,0 +1,50 @@
+<!--pages/publish/publish.wxml-->
+<view class="choose">
+  <view class="{{lost==0 ? 'lost_and_found' : 'lost_and_found_current'}}" bindtap="pickup" data-id='0'>失物招领</view>
+  <view class="{{find==0 ?'notice_of_looking_for_a_thing':'notice_of_looking_for_a_thing_current'}}" bindtap="pickup" data-id='1'>寻物启事</view>
+</view>
+
+<view class="optional_bar">
+  <picker class="place" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">{{multiArray[1][multiIndex[1]] + multiArray[2][multiIndex[2]]}}</picker>
+  <picker class="time" mode="date" value="{{date}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChange">{{date}}</picker>
+</view>
+
+<view class="body">
+  <view class="body_title">请给我取一个突出的标题</view>
+  <textarea class="body_title_text" placeholder-class="body_title_class" placeholder="请给我一个突出的标题吧！（字数小于20）" bindinput="inputTitle" value="{{inputTitle}}" maxlength="20"></textarea>
+  <view class="body_type">
+    <picker class="type_choose" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[index]}}</picker>
+  </view>
+  <text class="body_details_text">详细信息</text> 
+  <textarea class="body_details" placeholder-class="body_details_class" placeholder="输入更多详细信息帮助失主找到自己的物品" bindinput="inputTyping" value="{{inputVal}}"></textarea>
+  <view class="body_picture">
+    <view class="body_picture_bd">
+      <view class="body_picture_files" id="uploaderFiles">
+        <block wx:for="{{files}}" wx:key="*this">
+          <view class="uploader_file" bindtap="previewImage" id="{{item}}">
+            <image class="uploader_img" src="{{item}}" mode="aspectFill" />
+          </view>
+        </block>
+      </view>
+      <view class="body_picture_inputbox">
+        <view aria-role="button" aria-label="上传" class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </view>
+    <text class="add">若失物为证件，请部分隐去证件号，谢谢！</text>
+  </view>
+  
+</view>
+<view class="tag_end">
+  <picker class="lost_and_found_office" bindchange="bindLostProperty" value="{{lostPropertyIndex}}" range="{{lostPropertyList}}">{{lostProperty}}</picker>
+  <view class="contacts" wx:if="{{!consign}}">
+    <view class="contacts-title-name">联系人：</view>
+    <input class="input" bindinput="inputContacts" placeholder="如何称呼您" maxlength="4"/>
+  </view>
+  <view class="contact_method" wx:if="{{!consign}}">
+    <view class="contacts-title">联系方式：</view>
+    <input class="input" bindinput="inputContactsMethod" placeholder="如何联系您" maxlength="11"/>
+  </view>
+</view>
+
+<view class="confirm-to-upload" bindtap="upload">确认上传</view>
+

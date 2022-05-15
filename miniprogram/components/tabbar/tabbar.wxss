@@ -1,0 +1,40 @@
+/* components/rwj-tabbar/index.wxss */
+view,cover-view,cover-image{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.tabbar-container{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  display: flex;
+  align-items: flex-end;
+  border-top: 1rpx solid #e6e6e6;
+}
+.tabbar-container .tabbar-select{
+  color: #298acb;
+}
+.tabbar-item{
+  width: 50%;
+  height: 100rpx;
+  color: #71c6ff;
+  padding: 10rpx 0rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e6e6e6;
+}
+.tabbar-item .tabbar-image{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.tabbar-item .tabbar-image image{
+  width: 100rpx;
+  height: 100rpx;
+}

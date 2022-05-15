@@ -1,0 +1,31 @@
+/* pages/home/aboutUs/aboutUs.wxss */
+.container {
+  background-color: white;
+}
+.container .mingpian {
+  width: 96%;
+  align-content: center;
+  border-radius: 5px;
+}
+.container .mingpian-text {
+  width: 90%;
+  align-content: center;
+  padding-top: 14px;
+  line-height: 1.5em;
+}
+.container .weibu-text {
+  padding: 5px;
+  text-align: center;
+  color: #aaa;
+  font-size: 26rpx;
+}
+.container .joinus {
+  position: relative;
+  background-color:white;
+  width:  auto;
+  top: 30px;
+  right: -120px;
+  text-align: center;
+  font-size: 18px;
+  color: teal;
+}

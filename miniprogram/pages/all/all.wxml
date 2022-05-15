@@ -1,0 +1,26 @@
+<!--pages/all/all.wxml-->
+<view class="top-navigation">
+  <view class="{{lost == false ? 'top-left' : 'in'}}" bindtap="lost">失物招领</view>
+  <view class="{{lost == true ? 'top-right' : 'in'}}" bindtap="found">寻物启事</view>
+</view>
+
+<!--全部的信息内容-->
+<view class="mid">
+  <picker class="stateDate" mode="date" value="{{date}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChange">{{date}}</picker>
+  <picker class="stateType" bindchange="bindPickerChange" value="{{index}}" range="{{type}}">{{type[index]}}</picker>
+</view>
+
+<view class="all-info" wx:for="{{lostMsg}}" data-item="item" wx:for-index='key' wx:if="{{(lostMsg[key].lostAndFound == lost)&&((lostMsg[key].datetoString == date) || (date == '请选择'))&&((lostMsg[key].goodType == goodType) || (goodType == '请选择'))}}">
+  <view class="one-info" bindtap="toDetailPage" data-id='{{key}}'>
+    <image class="one-info-image" src="{{cloudImageURL[key].tempFileURL}}"></image>
+    <view class="info">
+      <view class="info-title"><text class="info-title-text">{{lostMsg[key].Title}}</text></view>
+      <text class="info-text">遗失时间:{{lostMsg[key].datetoString}}{{lostMsg[key].goodType}}</text>
+      <text class="info-text">遗失地点:{{lostMsg[key].place}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="end-tag">
+  <view></view>
+</view>

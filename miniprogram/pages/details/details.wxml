@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="main-title"><text class="main-title-text">这是一条正经的失物招领</text></view>
+  <view class="lost-info">
+    <view class="title"><text class="title-text">丢失物品详情\n</text></view>
+    <view class="info"><text class="info-text">捡到的地点：{{place}}</text></view>
+    <view class="info"><text class="info-text">捡到的时间：{{time}}</text></view>
+    <view class="info"><text class="info-text">具体细节信息：{{detail}}</text></view>
+    <view class="info"><image></image></view>
+  </view>
+  <view class="retrieve-contact-info">
+    <view class="title"><text class="title-text">找回物品联系方式\n</text></view>
+    <view class="info1">联系机构：个人\n</view>
+    <view class="info2" bindtap="contact">联系方式：{{Tel}}</view>
+  </view>
+</view> 

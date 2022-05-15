@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/newindex/newindex",
+    "pages/lost/lost",
+    "pages/found/found",
+    "pages/home/home",
+    "pages/home/self/self_info",
+    "pages/home/aboutUs/aboutUs",
+    "pages/details/details",
+    "pages/lostMsg/lostMsg",
+    "pages/all/all",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "物之归途",
+    "navigationBarTextStyle": "black"
+
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/newindex/newindex",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "tabbar": "components/tabbar/tabbar"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

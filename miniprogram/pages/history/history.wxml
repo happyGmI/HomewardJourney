@@ -1,0 +1,17 @@
+<view class="mid">
+  <picker class="state" header-text="state" bindchange="stateChange" value="{{index}}" range="{{statement}}">{{statement[index]}}</picker>
+  <picker class="type" header-text="state" bindchange="stateChange" value="{{index}}" range="{{statement}}">{{statement[index]}}</picker>
+</view>
+
+<view class="all-info" wx:for="{{lostMsg}}" data-item="item" wx:for-index='key'>
+  <view class="one-info" bindtap="toDetailPage" data-id='{{key}}'>
+    <image class="one-info-image" src="{{cloudImageURL[key].tempFileURL}}"></image>
+    <view class="info">
+      <view class="info-title"><text class="info-title-text">{{lostMsg[key].Title}}</text></view>
+      <text class="info-text">遗失时间:{{lostMsg[key].datetoString}}</text>
+      <text class="info-text">遗失地点:{{lostMsg[key].place}}</text>
+    </view>
+  </view>
+</view>
+<view class="tag-end">当前记录条目数：{{lostMsg.length}}</view>
+<view class="tag-end">最多仅能显示最近100条记录</view>

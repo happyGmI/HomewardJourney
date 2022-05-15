@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class='titleImage'>
+<image src='/image/Main1.png'></image>
+</view>
+<view class='notice'>
+  <view class="left">
+    <text class='iconfont icon-labagonggao voice'></text>
+      <view class="left-box">
+        <view class="left-text"></view>
+        <view class='content-box'>
+          <view class='content-text' animation="{{animationData}}"><text id="text">{{text}}</text></view>
+        </view>
+        <view class="right-text"></view>
+      </view>
+  </view>
+  <view class="right" bindtap="goApp">
+    <text class="more" bindtap="jumpMoreNotice">更多通知>></text>
+  </view>
+</view>
+<view class="text">
+    <view class="line_y"></view>
+    <text class="text1">快速导航</text>
+</view>
+
+<view class="navagation">
+  <!--跳转到寻物界面-->
+  <view class="find"><button class="findButton" bindtap="toLost"><image src="/image/find1.png" mode="widthFix"></image></button></view>
+  <!--跳转到发布失物招领界面-->
+  <view class="get"> <button class="getButton" bindtap="tofind"><image src="/image/get1.png" mode="widthFix" ></image></button></view>
+</view>
+<view class="text">
+  <view class="line_y"></view>
+  <text class="text1">最新的失物招领</text>
+  <text class="text2" bindtap="toAllLost">查看全部</text>
+</view>
+<view class="all-info" wx:for="{{lostMsg}}" data-item="item" wx:for-index='key'>
+  <view class="one-info" bindtap="toDetailPage" data-id='{{key}}' wx:if="{{lostMsg[key].lostAndFound}}">
+    <image class="one-info-image" src="{{cloudImageURL[key].tempFileURL}}"></image>
+    <view class="info">
+      <view class="info-title"><text class="info-title-text">{{lostMsg[key].Title}}</text></view>
+      <text class="info-text">遗失时间:{{lostMsg[key].datetoString}}</text>
+      <text class="info-text">遗失地点:{{lostMsg[key].place}}</text>
+    </view>
+  </view>
+</view>
+<view class="text">
+        <view class="line_y"></view>
+        <text class="text1">最新的寻物启事</text>
+        <text class="text2" bindtap="toAllFind">查看全部</text>
+</view> 
+<view class="all-info" wx:for="{{lostMsg}}" data-item="item" wx:for-index='key'>
+  <view class="one-info" bindtap="toDetailPage" data-id='{{key}}' wx:if="{{!lostMsg[key].lostAndFound}}">
+    <image class="one-info-image" src="{{cloudImageURL[key].tempFileURL}}"></image>
+    <view class="info">
+      <view class="info-title"><text class="info-title-text">{{lostMsg[key].Title}}</text></view>
+      <text class="info-text">遗失时间:{{lostMsg[key].datetoString}}</text>
+      <text class="info-text">遗失地点:{{lostMsg[key].place}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="menu-box">
+  <view class="navbar">
+    <view class="btn"  bindtap="openMap">
+      <view class="title">失物招领处</view>
+    </view>
+  </view>
+</view>
+<view class="block"></view>
+<tabbar></tabbar>

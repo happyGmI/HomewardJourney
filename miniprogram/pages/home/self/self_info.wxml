@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="title" >
+    <view class="top">个人信息</view>
+    <!--['修改信息','完成修改']两项-->
+    <view class="modify" bindtap="modifyInfomation">{{modifyTip[index]}}</view>
+  </view>
+  <view class="line"><view></view></view>
+  
+  <view class="body" wx:if="{{index==0}}">
+    
+    <view class="msg">
+      <text class="text-left">{{list[0]}}:</text>
+      <text class="text-right">{{name}}</text>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[1]}}:</text>
+      <text class="text-right">{{grade}}</text>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[2]}}:</text>
+      <text class="text-right">{{dorm}}</text>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[3]}}:</text>
+      <text class="text-right">{{Tel}}</text>
+    </view>
+  </view>
+  <view class="body" wx:if="{{index==1}}">
+    <view class="modifytext" wx:if="{{modifyTip[index] == '完成修改'}}">修改中......</view>
+    <view class="msg">
+      <text class="text-left">{{list[0]}}:</text>
+      <input class="text-right" placeholder="{{name}}" value="{{inputName}}" focus="{{inputShowed}}" bindinput="inputTyping" data-index="0"/>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[1]}}:</text>
+      <input class="text-right" placeholder="{{grade}}" value="{{inputGrade}}" focus="{{inputShowed}}" bindinput="inputTyping" data-index="1"/>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[2]}}:</text>
+      <input class="text-right" placeholder="{{dorm}}" value="{{inputDorm}}" focus="{{inputShowed}}" bindinput="inputTyping" data-index="2"/>
+    </view>
+    <view class="msg">
+      <text class="text-left">{{list[3]}}:</text>
+      <input class="text-right" placeholder="{{Tel}}" value="{{inputTel}}" focus="{{inputShowed}}" bindinput="inputTyping" data-index="3"/>
+    </view>
+  </view>
+
+  <view class="line"><view></view></view>
+  <view class="declaration">用户个人信息仅用作寻物拾物联系使用</view>
+</view>

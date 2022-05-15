@@ -1,0 +1,13 @@
+<!--components/rwj-tabbar/index.wxml-->
+<view class="tabbar-container">
+  <view class="tabbar-item" bindtap="switchJump" data-url="../../pages/newindex/newindex">
+    <view class="tabbar-image" data-active="0">
+      <image src="{{imageURL1}}"></image>
+    </view>
+  </view>
+  <view class="tabbar-item" bindtap="switchJump" data-url="../../pages/home/home" data-active="1">
+    <view class="tabbar-image">
+      <image  src="{{imageURL2}}"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+.container {
+  width: 100%;
+  height: auto;
+  background-color: rgba(245, 245, 245);
+}
+.container .main-title {
+  margin-top: 50px;
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+.container .main-title-text {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container .lost-info {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.container .lost-info .title{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.container .lost-info .title .title-text{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container .lost-info .info{
+  margin-top: 10x;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.container .lost-info .info .info-text{
+  word-break: break-all;
+}
+
+.container .retrieve-contact-info {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.container .retrieve-contact-info .title{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.container .retrieve-contact-info .title .title-text{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container .retrieve-contact-info .info1{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.container .retrieve-contact-info .info2{
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}

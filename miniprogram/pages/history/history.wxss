@@ -1,0 +1,80 @@
+
+.mid {
+  display: flex;
+  flex-direction: row;
+}
+
+.state {
+  width: 64px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  margin-top: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.type {
+  width: 64px;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  margin-top: 20px;
+  margin-left: 5%;
+  border-radius: 10px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.all-info {
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  background-color: white;
+  height: 100px;
+  
+}
+
+.all-info .one-info {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 4px 4px rgb(245, 245, 245);
+}
+.all-info .one-info-image {
+  margin-left: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+}
+
+.info-title {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.all-info .one-info .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-info .one-info .info .info-text {
+  margin-left: 25px;
+  margin-bottom: 0px;
+  font-weight: 100;
+  font-size: small;
+}
+
+.tag-end {
+  width: 100;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

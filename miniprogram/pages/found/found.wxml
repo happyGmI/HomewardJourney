@@ -1,0 +1,101 @@
+<!-- <image class="foundTitle" src="../../images/foundTitle.png" mode="widthFix"></image> -->
+<!--
+  此部分应当包含以下几个内容的选择：
+  1.发布失物招领的简要标题（必须项）
+  2.时间（必须项）
+  3.物品种类（必须项）
+  4.上传图片（可选项）
+  5.物品丢失地点信息（必须项）
+  6.其他详细的信息（可选项）
+  7.暂存的失物招领点（可选项）
+-->
+<view class="section">
+  <view class="section__title">请选择你捡到的物品类别：</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">请选择你捡到失物的地点</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">请选择你捡到失物的日期</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2022-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="ifConsignBox">
+  <view>是否选择寄存到失物招领处</view>
+  <switch type="checkbox" bindchange="ifConsign"></switch>
+</view>
+<view wx:if="{{consign}}">
+  <picker bindchange="bindLostProperty" value="{{lostPropertyIndex}}" range="{{lostPropertyList}}">
+    <view>当前选择：{{lostPropertyList[lostPropertyIndex]}}</view>
+  </picker>
+</view>
+<view class="weui-cells__title">附加信息</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_active">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="请输入文本" style="height: 3.3em" bindinput="inputTyping" value="{{inputVal}}"></textarea>
+    </view>
+  </view>
+</view>
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-cells">
+            <view class="weui-cell weui-cell_uploader">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                          <view aria-role="option" class="weui-uploader__overview">
+                              <view class="weui-uploader__title">照片上传</view>
+                              <view class="weui-uploader__info">{{files.length}}/2</view>
+                          </view>
+                          <view class="weui-uploader__tips">
+                            如果失物为一卡通或者身份证请将证件号信息隐去
+                          </view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for="{{files}}" wx:key="*this">
+                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                    </view>
+                                </block>
+                            </view>
+                            <view class="weui-uploader__input-box">
+                                <view aria-role="button" aria-label="上传" class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page" data-weui-theme="{{theme}}">
+    <view aria-hidden="{{dialog}}" class="page__hd"></view>
+    <view aria-hidden="{{dialog}}" class="page__bd page__bd_spacing">
+        <a class="weui-btn weui-btn_default" bindtap="uploadMessage">确认上传</a>
+    </view>
+    <view aria-role="dialog" aria-modal="true" class="fadeIn" wx:if="{{dialog}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__hd"><strong class="weui-dialog__title">成功上传信息</strong></view>
+            <view class="weui-dialog__bd">谢谢您的帮助！</view>
+            <view class="weui-dialog__ft">
+                <view aria-role="button" class="weui-dialog__btn weui-dialog__btn_primary" bindtap="close">确认</view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

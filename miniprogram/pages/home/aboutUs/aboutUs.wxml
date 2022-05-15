@@ -1,0 +1,7 @@
+<!--pages/home/aboutUs/aboutUs.wxml-->
+<view class="container">
+  <image class="mingpian" src="/image/mingpian.png" mode="widthFix"></image>
+  <text class="mingpian-text" space="emsp" decode="{{true}}">&emsp;&emsp;Y&W</text>
+  <view class="weibu-text">修改于2021/10/24</view>
+  <view class="joinus" bindtap="JoinUs">加入我们</view>
+</view>

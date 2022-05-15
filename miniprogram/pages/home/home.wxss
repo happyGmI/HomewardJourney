@@ -1,0 +1,176 @@
+page{
+  background-color: rgb(250, 250, 250);
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+  font-size: 32rpx;
+}
+.homeTitle {
+    width: 100%;
+}
+.navigator-hover{
+  background: none;
+}
+.header{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    flex-direction: row;
+    position: relative;
+    height: 160rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: white;
+    font-size: 28rpx;
+    color:black;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.header .userinfo-avatar{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.header .userinfo-avatar-text {
+    width: 30%;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+.header .selfInfo{
+    color: gray;
+}
+
+.publish {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 4px rgb(250,250,250);
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.myPublish {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+.myPublish .myPublish-left{
+    width: 40%;
+    margin-left: 10%;
+    text-align: left;
+}
+.myPublish .myPublish-right{
+    width: 40%;
+    text-align: right;
+    color: gray;
+    font-size: 14px;
+}
+
+.all-info .one-info {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 120px;
+    margin-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 4px 4px rgb(240, 240, 240);
+  }
+  .all-info .one-info-image {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+  }
+  
+  .info-title {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  .all-info .one-info .info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .all-info .one-info .info .info-text {
+    margin-left: 25px;
+    margin-bottom: 0px;
+    font-weight: 100;
+    font-size: small;
+  }
+
+  
+.functionBox {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.functionBox .functionBoxTitle {
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.functionBox .functionTips {
+    display: flex;
+    flex-direction: row;
+}
+
+.functionBox .functionTips .publish-info {
+    width: 30%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.functionBox .functionTips .be-office {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.functionBox .functionTips .contacts {
+    width: 30%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.functionBox .functionTips .message {
+    width: 30%;
+    margin-left: 20%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.aboutus {
+    width: 100%;
+}
+.aboutus text{
+    padding-top: 20px;
+    padding-right: 20px;
+    color:blue;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 40%;
+}
+.version {
+    margin-bottom: 50px;
+}
+.version text {
+    color: gray;
+    font-size: 10px;
+}

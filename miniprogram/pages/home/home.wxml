@@ -1,0 +1,48 @@
+<image class="homeTitle" src="../../images/homeTitle.png" mode="widthFix"></image>
+<view class="main">
+    <view class="header">
+        <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+        <open-data class="userinfo-avatar-text" type="userNickName"></open-data>
+        <!--下列text使用image代替，使用一个灰色的箭头-->
+        <text class="selfInfo" bindtap="intoSelfInfo">个人信息>>></text>
+    </view>
+    <!--分割线-->
+    <view class="publish">
+        <!--包含自己最近发布过的信息：寻物启事/失物招领，最多显示3条信息-->
+        <view class="myPublish">
+            <view class="myPublish-left">我的发布</view>
+            <view class="myPublish-right" bindtap="intoHistory">历史更多</view>
+        </view>
+        <view class="all-info" wx:for="{{lostMsg}}" data-item="item" wx:for-index='key'>
+            <view class="one-info" bindtap="toDetailPage" data-id='{{key}}'>
+            <image class="one-info-image" src="{{cloudImageURL[key].tempFileURL}}"></image>
+            <view class="info">
+                <view class="info-title"><text class="info-title-text">{{lostMsg[key].Title}}</text></view>
+                <text class="info-text">遗失时间:{{lostMsg[key].datetoString}}</text>
+                <text class="info-text">遗失地点:{{lostMsg[key].place}}</text>
+            </view>
+            </view>
+        </view>
+        <!--myPublish结束位置-->
+    </view>
+
+    <view class="functionBox" >
+        <view class="functionBoxTitle">功能箱</view>
+        <view class="functionTips">
+            <view class="publish-info" bindtap="publishInfo" bindtap="intoPublish"  ><button class="buttonbox" plain="true" size="mini">发布信息</button></view>
+            <view class="be-office" bindtap="beOffice"><button class="buttonbox" plain="true" size="mini">成寄存处</button></view>
+        </view>
+        <view class="functionTips">
+            <view class="contacts" bindtap="contacts" ><button class="buttonbox" open-type="contact" plain="true" size="mini">联系客服</button></view>
+            <view class="message" bindtap="message"  ><button class="buttonbox" plain="true" size="mini">消息中心</button></view>
+        </view>
+    </view>
+    <view class="aboutus">
+        <text class="about" bindtap="intoAboutUs">关于我们</text>
+    </view>
+    <!--加入版本信息，在制作时，参考WeUI库中的样式-->
+    <view class="version">
+        <text style="position: relative; left: 165rpx; top: 0rpx">Copyright &copy&;2021 homewardjourney</text>
+    </view>
+</view>
+<tabbar></tabbar>
