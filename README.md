@@ -1,6 +1,6 @@
 # HomewardJourney
 
-参加2021西电星火杯的一个微信小程序“Homeward Journey”
+参加2021西电星火杯的一个微信小程序“Homeward Journey”，只是完成了一个Demo，功能未进行完善
 
 ## 云开发 quickstart
 
